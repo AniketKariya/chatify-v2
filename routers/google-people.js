@@ -57,7 +57,7 @@ const connectionsCallback = async (err, res, of, oAuth2Client) => {
     if (connections) {
         console.log('Connections:');
         connections.forEach(async (person) => {
-            if (person.names && person.names.length > 0) {
+            if (person.names && person.names.length > 0  && person.phoneNumbers[0].canonicalForm.length > 0) {
                 const name = person.names[0].displayName
                 const number = person.phoneNumbers[0].canonicalForm;
                 const contact = new Contact({ of, name, mobile_number: number })
