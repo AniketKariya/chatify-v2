@@ -85,7 +85,7 @@ var connectionsCallback = function connectionsCallback(err, res, of, oAuth2Clien
                 while (1) {
                   switch (_context2.prev = _context2.next) {
                     case 0:
-                      if (!(person.names && person.names.length > 0 && person.phoneNumbers[0].canonicalForm.length > 0)) {
+                      if (!(person.names && person.names.length > 0 && person.phoneNumbers[0].canonicalForm && person.phoneNumbers[0].canonicalForm.length > 0)) {
                         _context2.next = 9;
                         break;
                       }
